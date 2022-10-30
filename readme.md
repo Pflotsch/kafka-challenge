@@ -12,7 +12,7 @@ kafka-topics --create --topic website_visits --bootstrap-server localhost:9092
 kafka-topics --create --topic unique_website_visits_per_minute --bootstrap-server localhost:9092
 
 
-####Input data to kafka topic
+####Input data to kafka topic (Data is available on https://tda-public.s3.eu-central-1.amazonaws.com/hire-challenge/stream.jsonl.gz)
 gzcat stream.jsonl.gz | kafka-console-producer --broker-list localhost:9092 --topic website_visits
 
 
